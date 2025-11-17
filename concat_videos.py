@@ -63,12 +63,23 @@ if __name__ == "__main__":
     total = 0
 
     for fname, dur in durations:
-        offsets.append((fname, str(timedelta(seconds=int(total))).zfill(8)))
+        offset = str(timedelta(seconds=int(total))).zfill(8)
+        offsets.append((fname, offset))
         total += dur
 
     print("\n📘 Timecode Offsets:")
     for fname, offset in offsets:
         print(f" {fname} → {offset}")
+
+    # =========================
+    # Save time offsets to report file
+    # =========================
+    report_path = os.path.join(INPUT_DIR, "video_offsets_report.txt")
+    with open(report_path, "w") as report:
+        for fname, offset in offsets:
+            report.write(f"{fname} {offset}\n")
+
+    print(f"\n📝 Offsets report saved to: {report_path}")
 
     print("\n📝 Generating concat_list.txt ...")
 
