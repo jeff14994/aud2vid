@@ -15,6 +15,30 @@ Ideal for podcast compilation, audio archiving, automated media pipelines, and b
 
 ---
 
+## Procedure
+
+```mermaid
+flowchart TD
+    A[📁 input/ <br>001.mp3, 002.mp3, ...] --> B[🐍 convert_mp3_to_mp4.py]
+
+    B --> C[🎞️ output/ <br>001.mp4, 002.mp4, ...]
+
+    C --> D[🐍 concat_videos.py]
+    D --> E[📝 concat_list.txt <br>file '001.mp4'<br>file '002.mp4'<br>...]
+    D --> F[📝 video_offsets_report.txt <br>001.mp4 00:00:00<br>002.mp4 00:02:28<br>...]
+    D --> G[🎬 final_output.mp4]
+
+    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    style B fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style D fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
+    style E fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px
+    style F fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px
+    style G fill:#ffebee,stroke:#c62828,stroke-width:1px
+```
+
+---
+
 ## 📂 Directory Structure
 
 ```
