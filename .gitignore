@@ -1,0 +1,78 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.log
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ======================
+# Project-specific
+# ======================
+
+# FFmpeg concat list
+concat_list.txt
+
+# Output media
+*.mp4
+*.m4a
+*.mov
+*.wav
+*.webm
+
+# If you want to exclude original input files too:
+# *.mp3
+
+# Intermediate files
+*.tmp
+*.temp
+
+# = Optional =
+# Uncomment if you want to include only your scripts and NOT videos
+# /mnt/data/
+
+# ======================
+# OS/System files
+# ======================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.cache/
+
+# ======================
+# Editors
+# ======================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+*.swp
